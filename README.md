@@ -50,7 +50,7 @@ The diamond market is complex and highly value-driven. Accurate price prediction
 
 1. **Clone the repo**
    ```bash
-   git clone https://github.com/KarthikSarika/diamond-price-prediction.git
+   git clone https://github.com/KarthikSarika/Diamond-Price-Prediction-Model.git
    cd diamond-price-prediction
    ```
 
