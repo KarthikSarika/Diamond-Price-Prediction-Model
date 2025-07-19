@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diamond Price Prediction</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eaeef2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 30%;
+            min-width: 150px;
+        }
+        label {
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #555;
+        }
+        input, select {
+            padding: 8px;
+            border: 2px solid #4CAF50;
+            border-radius: 5px;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+        }
+        input:focus, select:focus {
+            border-color: #45a049;
+            outline: none;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        button:active {
+            transform: translateY(2px);
+        }
+        h2 {
+            margin-top: 30px; /* Space between form and prediction text */
+            color: #333;
+        }
+        @media (max-width: 800px) {
+            form {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Diamond Price Prediction Form</h1>
+        <form action="/" method="POST">
+            <div class="form-group">
+                <label for="carat">Carat</label>
+                <input type="number" id="carat" name="carat" step="0.01" min="0" value="0.23" required>
+            </div>
+            <div class="form-group">
+                <label for="depth">Depth (%)</label>
+                <input type="number" id="depth" name="depth" step="0.1" min="0" value="61.5" required>
+            </div>
+            <div class="form-group">
+                <label for="table">Table (%)</label>
+                <input type="number" id="table" name="table" step="0.1" min="0" value="55.0" required>
+            </div>
+            <div class="form-group">
+                <label for="x">X (mm)</label>
+                <input type="number" id="x" name="x" step="0.01" min="0" value="3.95" required>
+            </div>
+            <div class="form-group">
+                <label for="y">Y (mm)</label>
+                <input type="number" id="y" name="y" step="0.01" min="0" value="3.98" required>
+            </div>
+            <div class="form-group">
+                <label for="z">Z (mm)</label>
+                <input type="number" id="z" name="z" step="0.01" min="0" value="2.43" required>
+            </div>
+            <div class="form-group">
+                <label for="cut">Cut</label>
+                <select id="cut" name="cut">
+                    <option value="Ideal" selected>Ideal</option>
+                    <option value="Premium">Premium</option>
+                    <option value="Good">Good</option>
+                    <option value="Fair">Fair</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="color">Color</label>
+                <select id="color" name="color">
+                    <option value="D">D</option>
+                    <option value="E" selected>E</option>
+                    <option value="F">F</option>
+                    <option value="G">G</option>
+                    <option value="H">H</option>
+                    <option value="I">I</option>
+                    <option value="J">J</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="clarity">Clarity</label>
+                <select id="clarity" name="clarity">
+                    <option value="IF">IF</option>
+                    <option value="VVS1">VVS1</option>
+                    <option value="VVS2">VVS2</option>
+                    <option value="VS1">VS1</option>
+                    <option value="VS2">VS2</option>
+                    <option value="SI1">SI1</option>
+                    <option value="SI2" selected>SI2</option>
+                </select>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
